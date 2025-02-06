@@ -8,7 +8,6 @@ const withMDX = mdx({
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   pageExtensions: ["ts", "tsx", "md", "mdx"],
-  distDir: "build" // Change default output folder from .next to build
 };
 
 export default withMDX(nextConfig);
