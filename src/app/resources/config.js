@@ -1,4 +1,4 @@
-const baseURL = "mukulwaval.github.io/MukulWaval";
+const baseURL = "mukulwaval.github.io/page";
 
 const routes = {
   "/": true,
