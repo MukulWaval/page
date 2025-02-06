@@ -8,10 +8,11 @@ const withMDX = mdx({
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   pageExtensions: ["ts", "tsx", "md", "mdx"],
-  output: "export", // Enables static export
-  assetPrefix: "/page/",
+  output: "export", // Required for GitHub Pages
+  assetPrefix: "/page/", // Important for loading CSS and JS assets
+  trailingSlash: true, // Ensures links work correctly
   images: {
-    unoptimized: true // GitHub Pages does not support Next.js Image Optimization
+    unoptimized: true // Required for GitHub Pages
   }
 };
 
