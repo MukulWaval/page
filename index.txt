@@ -1,0 +1,222 @@
+2:I[8047,["665","static/chunks/f97e080b-82142bce571282c5.js","240","static/chunks/53c13509-59dce8ec7d519f72.js","516","static/chunks/f7333993-ace1ec7364ac2d23.js","464","static/chunks/464-88c883967376f472.js","7","static/chunks/7-7a038ed106da55dc.js","102","static/chunks/102-5d70dc082104b728.js","931","static/chunks/app/page-a02ecf12878a0e72.js"],"Column"]
+3:I[435,["665","static/chunks/f97e080b-82142bce571282c5.js","240","static/chunks/53c13509-59dce8ec7d519f72.js","516","static/chunks/f7333993-ace1ec7364ac2d23.js","464","static/chunks/464-88c883967376f472.js","7","static/chunks/7-7a038ed106da55dc.js","102","static/chunks/102-5d70dc082104b728.js","931","static/chunks/app/page-a02ecf12878a0e72.js"],"RevealFx"]
+4:I[9316,["665","static/chunks/f97e080b-82142bce571282c5.js","240","static/chunks/53c13509-59dce8ec7d519f72.js","516","static/chunks/f7333993-ace1ec7364ac2d23.js","464","static/chunks/464-88c883967376f472.js","7","static/chunks/7-7a038ed106da55dc.js","102","static/chunks/102-5d70dc082104b728.js","931","static/chunks/app/page-a02ecf12878a0e72.js"],"Heading"]
+5:I[2060,["665","static/chunks/f97e080b-82142bce571282c5.js","240","static/chunks/53c13509-59dce8ec7d519f72.js","516","static/chunks/f7333993-ace1ec7364ac2d23.js","464","static/chunks/464-88c883967376f472.js","7","static/chunks/7-7a038ed106da55dc.js","102","static/chunks/102-5d70dc082104b728.js","931","static/chunks/app/page-a02ecf12878a0e72.js"],"Text"]
+6:I[2092,["665","static/chunks/f97e080b-82142bce571282c5.js","240","static/chunks/53c13509-59dce8ec7d519f72.js","516","static/chunks/f7333993-ace1ec7364ac2d23.js","464","static/chunks/464-88c883967376f472.js","7","static/chunks/7-7a038ed106da55dc.js","102","static/chunks/102-5d70dc082104b728.js","931","static/chunks/app/page-a02ecf12878a0e72.js"],"Button"]
+7:I[1162,["665","static/chunks/f97e080b-82142bce571282c5.js","240","static/chunks/53c13509-59dce8ec7d519f72.js","516","static/chunks/f7333993-ace1ec7364ac2d23.js","464","static/chunks/464-88c883967376f472.js","7","static/chunks/7-7a038ed106da55dc.js","102","static/chunks/102-5d70dc082104b728.js","931","static/chunks/app/page-a02ecf12878a0e72.js"],"Flex"]
+8:I[5312,["665","static/chunks/f97e080b-82142bce571282c5.js","240","static/chunks/53c13509-59dce8ec7d519f72.js","516","static/chunks/f7333993-ace1ec7364ac2d23.js","464","static/chunks/464-88c883967376f472.js","7","static/chunks/7-7a038ed106da55dc.js","102","static/chunks/102-5d70dc082104b728.js","931","static/chunks/app/page-a02ecf12878a0e72.js"],"Avatar"]
+9:I[9818,["665","static/chunks/f97e080b-82142bce571282c5.js","240","static/chunks/53c13509-59dce8ec7d519f72.js","516","static/chunks/f7333993-ace1ec7364ac2d23.js","464","static/chunks/464-88c883967376f472.js","7","static/chunks/7-7a038ed106da55dc.js","102","static/chunks/102-5d70dc082104b728.js","931","static/chunks/app/page-a02ecf12878a0e72.js"],"ProjectCard"]
+b:I[5094,["665","static/chunks/f97e080b-82142bce571282c5.js","240","static/chunks/53c13509-59dce8ec7d519f72.js","516","static/chunks/f7333993-ace1ec7364ac2d23.js","464","static/chunks/464-88c883967376f472.js","7","static/chunks/7-7a038ed106da55dc.js","102","static/chunks/102-5d70dc082104b728.js","931","static/chunks/app/page-a02ecf12878a0e72.js"],"Grid"]
+c:I[7659,["665","static/chunks/f97e080b-82142bce571282c5.js","240","static/chunks/53c13509-59dce8ec7d519f72.js","516","static/chunks/f7333993-ace1ec7364ac2d23.js","464","static/chunks/464-88c883967376f472.js","7","static/chunks/7-7a038ed106da55dc.js","102","static/chunks/102-5d70dc082104b728.js","931","static/chunks/app/page-a02ecf12878a0e72.js"],"default"]
+a:T831,
+## Overview
+
+Chisel is a high-performance Markdown parser built in C++ that fully supports Obsidian-flavored Markdown. It was designed to handle complex syntax features, including links, callouts, math equations, and embedded content, while maintaining speed and efficiency.
+
+## Key Features
+
+- **Obsidian Syntax Support**: Implements full compatibility with Obsidian’s extended Markdown features, including wikilinks, callouts, and transclusions.
+- **High-Performance Parsing**: Optimized parsing algorithms written in C++ to handle large Markdown files efficiently.
+- **HTML & AST Output**: Converts Markdown into structured Abstract Syntax Trees (AST) and HTML for rendering in different environments.
+- **Custom Extension Support**: Allows adding new syntax rules and extensions to adapt to evolving Markdown needs.
+- **Error Handling & Recovery**: Provides detailed error messages and recovery mechanisms to handle malformed Markdown gracefully.
+
+## Technologies Used
+
+- **C++**: For high-performance parsing and efficient memory management.
+- **Flex & Bison (or Custom Lexer/Parser)**: For defining and processing Markdown grammar.
+- **Obsidian Markdown Specification**: Ensures full compatibility with Obsidian's extended syntax.
+- **Unicode & UTF-8 Handling**: Properly supports international characters and symbols.
+
+## Challenges and Learnings
+
+One major challenge was ensuring compatibility with all of Obsidian’s extended Markdown features while maintaining parsing speed. Handling nested elements like callouts, embedded content, and custom syntax required careful structuring of the parsing logic. Implementing a modular architecture allowed for future expansion and customization.
+
+## Outcome
+
+Chisel is now a fast, reliable Markdown parser tailored for Obsidian users. It provides a foundation for integrating Markdown rendering into custom applications while preserving full compatibility with Obsidian’s ecosystem. The project improves document processing efficiency and offers a flexible solution for developers working with Markdown at scale.
+d:T1a26,
+## Basic Info.
+
+- **Date:** 15 December 2024
+- **Trek Duration:** 6 Hours 18 Minutes
+- **Start and End Location:** Savale, Maval Taluka, Pune - 410401
+- **Organised By:** GGIM Udaan
+
+---
+
+## Objective
+
+The primary objective of the trek was to navigate the rugged terrain of the Sahyadri Hills, honing essential trekking skills such as navigation, teamwork, and terrain management, while observing the unique biodiversity of the Western Ghats.
+
+---
+
+## Map
+
+![map](/images/blogs/baildara-to-fenyadevi-ghat-trek-report/map.jpg)
+
+[Click here to open the map](https://www.google.com/maps/d/u/0/edit?mid=11HJmbJYTSse9InikCixo1Ep_1x9YatA&usp=sharing)
+
+---
+
+## Route Overview
+
+- **Starting Point:** Vitthalvadi Village (18.95705° N, 73.48300° E)
+- **Ending Point:** Fenyadevi Ghat (18.95705° N, 73.48300° E)
+- **Distance Covered:** 9.5 km
+- **Elevation Range:** ~700 m to ~450 m
+- **Notable Landmarks:** Kalakrai Village, Baildara Trail
+
+---
+
+## Route Description
+
+The trek began in Vitthalvadi Village, where we were greeted by the sight of Kothaligad Fort in the distance. The trail initially led us up a hillock offering panoramic views of Peth village. Moving westward, we entered the Baildara Trail, characterized by dense karvi shrubs and unmarked paths. The trail descended sharply to Kalakrai Village, where we paused for a short break.
+
+From Kalakrai, the route transitioned to the Fenyadevi Ghat Trail, featuring steep ascents, dramatic rock formations, and ancient stone relics. The final stretch involved navigating narrow footpaths back to Vitthalvadi Village, concluding the trek.
+
+---
+
+## Trail Guide
+
+### Starting Point: Vitthalvadi Village
+
+1. Begin at Vitthalvadi village (may appear as Methalvadi on maps).
+2. Cross a small hillock to reach the start of the Baildara trail.
+3. From the hillock, Kothaligad and its base village Peth can be sighted.
+
+### Baildara Trail (to Kalakrai)
+
+1. Follow the Baildara trail, which is narrow and overgrown with karvi.
+2. Descend from 700m to 450m to reach a four-way junction.
+3. Turn left (westward) to continue towards Kalakrai village.
+   - _(Do not take the straight-down path to a small village in Raigad district.)_
+   - _(Turn right to visit an old well.)_
+
+### Kalakrai to Vitthalvadi via Fenyadevi Ghat
+
+1. From Kalakrai, head westward along the Fenyadevi ghat trail.
+2. The trail eventually makes a sharp southward turn. Look for a stone relic under a tree at this point.
+3. Continue to the Fenyadevi ghat, which is wide and rocky.
+4. Look for another holy relic carved in stone along the way.
+5. Climb 200m to reach the flatland at the top of the ghat.
+6. From the flatland, follow the footpath to return to Vitthalvadi village.
+
+---
+
+## Team Details
+
+- **Participants:** 9
+- **Trek Leader:** Vivek Shivade (GGIM Udaan Instructor)
+- **Instructors:** Anushka Deo (GGIM Udaan Instructor)
+
+The trek followed a participant-centered approach, with the team managing route planning, gear handling, and decision-making under the guidance of the instructors.
+
+---
+
+## Gear Checklist
+
+### Attire
+
+- Full-sleeve clothing
+- Trekking shoes
+
+### Personal Gear
+
+- 3 liters of water
+- Packed breakfast and lunch
+- Daypack
+- Extra set of clothing
+- Sun cap
+- Rainwear
+- Notebook and pen
+
+### Group Gear
+
+- First aid kit (containing antibiotics, painkillers, cotton, crepe bandage, and scissors)
+- Walkie-talkies
+- Dynamic rope
+
+---
+
+## Terrain and Biodiversity
+
+### Terrain
+
+- **Steep Descents:** Gravel-strewn paths and rocky patches required careful footing.
+- **Narrow Trails:** Overgrown with vegetation, these sections tested our navigation skills.
+- **Ridge Walks:** Open ridges offered stunning views of the surrounding peaks and valleys.
+
+### Biodiversity Highlights
+
+- **Tree Canopy:** Dominated by Ain (_Terminalia elliptica_) and Hirda (_Terminalia chebula_).
+- **Shrubs:** Dense growth of karvi (_Strobilanthes callosus_), a unique species known for its 7-year blooming cycle.
+- **Ground Cover:** Seasonal grasses and ferns thriving in the post-monsoon landscape.
+
+---
+
+## Activities and Learning
+
+### Navigation Challenges
+
+The team faced a significant challenge during the descent from Baildara, where a missed junction delayed progress.
+
+### Rope Coiling Drill
+
+The trek included a session on dynamic rope coiling, focusing on proper storage and rapid deployment. This practical activity enhanced our technical preparedness for future expeditions.
+
+### Independent Trekking
+
+Participants were encouraged to lead sections of the trail, fostering self-reliance and decision-making in real-time scenarios.
+
+---
+
+## Challenges Faced
+
+- **Navigation Errors:** A missed junction delayed progress.
+- **Loose Terrain:** Steep descents with loose gravel required caution.
+- **Gear Mismanagement:** A participant lost their phone on a technical section.
+- **Dehydration:** Mild dehydration among participants despite winter conditions.
+
+---
+
+## Reflections and Recommendations
+
+### Key Successes
+
+- Effective teamwork in overcoming challenges.
+- Valuable technical rope coiling session.
+- Immersive experience of Sahyadri’s beauty and biodiversity.
+
+### Areas for Improvement
+
+- **Gear Packing:** Secure valuables during technical sections.
+- **Hydration Strategies:** Use ORS or electrolytes on longer treks.
+- **Equipment Use:** Promote walking poles for steep gradients.
+
+---
+
+## Photos
+
+![Photo](/images/blogs/baildara-to-fenyadevi-ghat-trek-report/img-01.jpg)  
+![Photo](/images/blogs/baildara-to-fenyadevi-ghat-trek-report/img-02.jpg)  
+![Photo](/images/blogs/baildara-to-fenyadevi-ghat-trek-report/img-03.jpg) ![Photo](/images/blogs/baildara-to-fenyadevi-ghat-trek-report/img-04.jpg)![Photo](/images/blogs/baildara-to-fenyadevi-ghat-trek-report/img-05.jpg)![Photo](/images/blogs/baildara-to-fenyadevi-ghat-trek-report/img-06.jpg)![Photo](/images/blogs/baildara-to-fenyadevi-ghat-trek-report/img-07.jpg)![Photo](/images/blogs/baildara-to-fenyadevi-ghat-trek-report/img-08.jpg)![Photo](/images/blogs/baildara-to-fenyadevi-ghat-trek-report/img-09.jpg)
+
+---
+
+## Conclusion
+
+The Baildara to Fenyadevi Ghat trek was a rewarding experience, offering challenges that tested our physical and mental endurance. The scenic trails, diverse flora, and panoramic views highlighted the timeless charm of the Sahyadri Hills.
+
+This trek not only reinforced essential trekking skills but also deepened our appreciation for the wilderness. The lessons learned will undoubtedly serve as a foundation for future expeditions, ensuring safer and more fulfilling adventures ahead.
+0:["WpTwzccOimXgkynZSoZAT",[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],["",{"children":["__PAGE__",{},[["$L1",["$","$L2",null,{"maxWidth":"m","gap":"xl","horizontal":"center","children":[["$","script",null,{"type":"application/ld+json","suppressHydrationWarning":true,"dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"WebPage\",\"name\":\"Mukul Waval's Portfolio\",\"description\":\"Portfolio website showcasing my work as a SDE Intern\",\"url\":\"https://mukulwaval.github.io/page\",\"image\":\"mukulwaval.github.io/page/og?title=Mukul%20Waval's%20Portfolio\",\"publisher\":{\"@type\":\"Person\",\"name\":\"Mukul Waval\",\"image\":{\"@type\":\"ImageObject\",\"url\":\"mukulwaval.github.io/page/images/avatar.jpg\"}}}"}}],["$","$L2",null,{"fillWidth":true,"paddingY":"l","gap":"m","children":["$","$L2",null,{"maxWidth":"s","children":[["$","$L3",null,{"translateY":"4","fillWidth":true,"horizontal":"start","paddingBottom":"m","children":["$","$L4",null,{"wrap":"balance","variant":"display-strong-l","children":"SDE Intern"}]}],["$","$L3",null,{"translateY":"8","delay":0.2,"fillWidth":true,"horizontal":"start","paddingBottom":"m","children":["$","$L5",null,{"wrap":"balance","onBackground":"neutral-weak","variant":"heading-default-xl","children":"I'm Mukul Waval. I enjoy working on projects that challenge me and push me to learn more."}]}],["$","$L3",null,{"translateY":"12","delay":0.4,"horizontal":"start","children":["$","$L6",null,{"id":"about","data-border":"rounded","href":"/about","variant":"secondary","size":"m","arrowIcon":true,"children":["$","$L7",null,{"gap":"8","vertical":"center","children":[["$","$L8",null,{"style":{"marginLeft":"-0.75rem","marginRight":"0.25rem"},"src":"/images/avatar.jpg","size":"m"}],"About me"]}]}]}]]}]}],["$","$L3",null,{"translateY":"16","delay":0.6,"children":["$","$L2",null,{"fillWidth":true,"gap":"xl","marginBottom":"40","paddingX":"l","children":[["$","$L9","development-of-chisel",{"priority":true,"href":"work/development-of-chisel","images":["/images/projects/chisel/cover-01.jpg"],"title":"Building Chisel, a Markdown Parser for Obsidian","description":"Development of Chisel, a high-performance Markdown parser written in C++ with full support for Obsidian-flavored Markdown.","content":"$a","avatars":[{"src":"/images/avatar.jpg"}],"link":"https://github.com/MukulWaval/Markdown-Parser"}]]}]}],["$","$L7",null,{"fillWidth":true,"gap":"24","mobileDirection":"column","children":[["$","$L7",null,{"flex":1,"paddingLeft":"l","children":["$","$L4",null,{"as":"h2","variant":"display-strong-xs","wrap":"balance","children":"Latest from the blog"}]}],["$","$L7",null,{"flex":3,"paddingX":"20","children":["$","$Lb",null,{"columns":"2","mobileColumns":"1","fillWidth":true,"marginBottom":"40","gap":"m","children":[["$","$Lc","baildara-to-fenyadevi-ghat-trek-report",{"post":{"metadata":{"title":"Baildara to Fenyadevi Ghat Trek Report","publishedAt":"2025-01-08","summary":"A scenic 9.5 km trek through the rugged Sahyadri Hills, blending breathtaking views, unique biodiversity, and essential trekking skills.","image":"/images/blogs/baildara-to-fenyadevi-ghat-trek-report/img-09.jpg","images":[],"tag":"Trekking","team":[],"link":""},"slug":"baildara-to-fenyadevi-ghat-trek-report","content":"$d"},"thumbnail":false}]]}]}]]}],["$","$L2",null,{"fillWidth":true,"gap":"xl","marginBottom":"40","paddingX":"l","children":[]}],false]}],null],null],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/page/_next/static/css/3ef6a0027566570c.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/page/_next/static/css/210c18230efd1494.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","2",{"rel":"stylesheet","href":"/page/_next/static/css/a8c4e1ca9815a60e.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","3",{"rel":"stylesheet","href":"/page/_next/static/css/e578cf952a0222b2.css","precedence":"next","crossOrigin":"$undefined"}]],"$Le"],null],null],["$Lf",null]]]]
+10:I[6995,["665","static/chunks/f97e080b-82142bce571282c5.js","240","static/chunks/53c13509-59dce8ec7d519f72.js","516","static/chunks/f7333993-ace1ec7364ac2d23.js","464","static/chunks/464-88c883967376f472.js","7","static/chunks/7-7a038ed106da55dc.js","102","static/chunks/102-5d70dc082104b728.js","931","static/chunks/app/page-a02ecf12878a0e72.js"],"ToastProvider"]
+11:I[124,["665","static/chunks/f97e080b-82142bce571282c5.js","240","static/chunks/53c13509-59dce8ec7d519f72.js","516","static/chunks/f7333993-ace1ec7364ac2d23.js","464","static/chunks/464-88c883967376f472.js","7","static/chunks/7-7a038ed106da55dc.js","102","static/chunks/102-5d70dc082104b728.js","931","static/chunks/app/page-a02ecf12878a0e72.js"],"Background"]
+12:I[9295,["665","static/chunks/f97e080b-82142bce571282c5.js","240","static/chunks/53c13509-59dce8ec7d519f72.js","516","static/chunks/f7333993-ace1ec7364ac2d23.js","464","static/chunks/464-88c883967376f472.js","7","static/chunks/7-7a038ed106da55dc.js","102","static/chunks/102-5d70dc082104b728.js","931","static/chunks/app/page-a02ecf12878a0e72.js"],"Header"]
+13:I[2847,["665","static/chunks/f97e080b-82142bce571282c5.js","240","static/chunks/53c13509-59dce8ec7d519f72.js","516","static/chunks/f7333993-ace1ec7364ac2d23.js","464","static/chunks/464-88c883967376f472.js","7","static/chunks/7-7a038ed106da55dc.js","102","static/chunks/102-5d70dc082104b728.js","931","static/chunks/app/page-a02ecf12878a0e72.js"],"RouteGuard"]
+14:I[4707,[],""]
+15:I[6423,[],""]
+16:I[7868,["665","static/chunks/f97e080b-82142bce571282c5.js","240","static/chunks/53c13509-59dce8ec7d519f72.js","516","static/chunks/f7333993-ace1ec7364ac2d23.js","464","static/chunks/464-88c883967376f472.js","7","static/chunks/7-7a038ed106da55dc.js","102","static/chunks/102-5d70dc082104b728.js","931","static/chunks/app/page-a02ecf12878a0e72.js"],"IconButton"]
+e:["$","$L7",null,{"as":"html","lang":"en","background":"page","data-neutral":"gray","data-brand":"violet","data-accent":"indigo","data-solid":"contrast","data-solid-style":"plastic","data-theme":"dark","data-border":"playful","data-surface":"translucent","data-transition":"all","className":"__variable_bee095 __variable_c5093d","children":["$","$L10",null,{"children":["$","$L2",null,{"style":{"minHeight":"100vh"},"as":"body","fillWidth":true,"margin":"0","padding":"0","children":[["$","$L11",null,{"mask":{"cursor":true,"x":0,"y":0,"radius":75},"gradient":{"display":true,"x":50,"y":0,"width":100,"height":100,"tilt":0,"colorStart":"brand-background-strong","colorEnd":"static-transparent","opacity":50},"dots":{"display":true,"color":"brand-on-background-weak","size":2,"opacity":20},"grid":{"display":true,"color":"neutral-alpha-weak","width":"$undefined","height":"$undefined","opacity":100},"lines":{"display":false,"opacity":100}}],["$","$L7",null,{"fillWidth":true,"minHeight":"16"}],["$","$L12",null,{}],["$","$L7",null,{"position":"relative","zIndex":0,"fillWidth":true,"paddingY":"l","paddingX":"l","horizontal":"center","flex":1,"children":["$","$L7",null,{"horizontal":"center","fillWidth":true,"minHeight":"0","children":["$","$L13",null,{"children":["$","$L14",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L15",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$","$L2",null,{"as":"section","fill":true,"center":true,"paddingBottom":"160","children":[["$","$L5",null,{"marginBottom":"s","variant":"display-strong-xl","children":"404"}],["$","$L4",null,{"marginBottom":"l","variant":"display-default-xs","children":"Page Not Found"}],["$","$L5",null,{"onBackground":"neutral-weak","children":"The page you are looking for does not exist."}]]}],"notFoundStyles":[]}]}]}]}],["$","$L7",null,{"as":"footer","position":"relative","fillWidth":true,"padding":"8","horizontal":"center","mobileDirection":"column","children":[["$","$L7",null,{"className":"Footer_mobile__TYNqJ","maxWidth":"m","paddingY":"8","paddingX":"16","gap":"16","horizontal":"space-between","vertical":"center","children":[["$","$L5",null,{"variant":"body-default-s","onBackground":"neutral-strong","children":[["$","$L5",null,{"onBackground":"neutral-weak","children":["© ",2025," /"]}],["$","$L5",null,{"paddingX":"4","children":"Mukul Waval"}]]}],["$","$L7",null,{"gap":"16","children":[["$","$L16","GitHub",{"href":"https://github.com/MukulWaval/","icon":"github","tooltip":"GitHub","size":"s","variant":"ghost"}],["$","$L16","LinkedIn",{"href":"https://www.linkedin.com/in/mukul-waval-ab4a772a7/","icon":"linkedin","tooltip":"LinkedIn","size":"s","variant":"ghost"}],["$","$L16","Email",{"href":"mailto:mukulwaval2000@gmail.com","icon":"email","tooltip":"Email","size":"s","variant":"ghost"}]]}]]}],["$","$L7",null,{"height":"80","show":"s"}]]}]]}]}]}]
+f:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"Mukul Waval's Portfolio"}],["$","meta","3",{"name":"description","content":"Portfolio website showcasing my work as a SDE Intern"}],["$","meta","4",{"name":"robots","content":"index, follow"}],["$","meta","5",{"name":"googlebot","content":"index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"}],["$","meta","6",{"property":"og:title","content":"Mukul Waval's Portfolio"}],["$","meta","7",{"property":"og:description","content":"Portfolio website showcasing my work as a SDE Intern"}],["$","meta","8",{"property":"og:url","content":"https://mukulwaval.github.io/page"}],["$","meta","9",{"property":"og:image","content":"https://mukulwaval.github.io/page/og?title=Mukul%20Waval%27s%20Portfolio"}],["$","meta","10",{"property":"og:image:alt","content":"Mukul Waval's Portfolio"}],["$","meta","11",{"property":"og:type","content":"website"}],["$","meta","12",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","13",{"name":"twitter:title","content":"Mukul Waval's Portfolio"}],["$","meta","14",{"name":"twitter:description","content":"Portfolio website showcasing my work as a SDE Intern"}],["$","meta","15",{"name":"twitter:image","content":"https://mukulwaval.github.io/page/og?title=Mukul%20Waval%27s%20Portfolio"}],["$","link","16",{"rel":"icon","href":"/favicon.ico","type":"image/x-icon","sizes":"16x16"}]]
+1:null
