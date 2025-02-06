@@ -3,10 +3,8 @@ import "@/once-ui/tokens/index.scss";
 
 import classNames from "classnames";
 
-import { Footer } from "@/components/Footer";
-import { Header } from "@/components/Header";
-import { RouteGuard } from "@/components/RouteGuard";
-import { baseURL, effects, style } from "@/once-ui/resources/config";
+import { Footer, Header, RouteGuard } from "@/components";
+import { baseURL, effects, style } from "@/app/resources";
 
 import { Inter } from "next/font/google";
 import { Source_Code_Pro } from "next/font/google";
@@ -138,6 +136,8 @@ export default async function RootLayout({ children }: RootLayoutProps) {
             grid={{
               display: effects.grid.display,
               color: effects.grid.color,
+              width: effects.grid.width as any,
+              height: effects.grid.height as any,
               opacity: effects.grid.opacity as any
             }}
             lines={{

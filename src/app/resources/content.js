@@ -6,14 +6,14 @@ const person = {
   get name() {
     return `${this.firstName} ${this.lastName}`;
   },
-  role: "Design Engineer",
+  role: "SDE Intern",
   avatar: "/images/avatar.jpg",
   location: "Asia/Kolkata", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"] // optional: Leave the array empty if you don't want to display languages
+  languages: ["English", "Marathi"] // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter = {
-  display: true,
+  display: false,
   title: <>Subscribe to {person.firstName}'s Newsletter</>,
   description: (
     <>
@@ -29,22 +29,17 @@ const social = [
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system/nextjs-starter"
+    link: "https://github.com/MukulWaval/"
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/"
-  },
-  {
-    name: "X",
-    icon: "x",
-    link: ""
+    link: "https://www.linkedin.com/in/mukul-waval-ab4a772a7/"
   },
   {
     name: "Email",
     icon: "email",
-    link: "mailto:example@gmail.com"
+    link: "mailto:mukulwaval2000@gmail.com"
   }
 ];
 
@@ -52,12 +47,11 @@ const home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Design engineer and builder</>,
+  headline: <>SDE Intern</>,
   subline: (
     <>
-      I'm Selene, a design engineer at <InlineCode>FLY</InlineCode>, where I
-      craft intuitive
-      <br /> user experiences. After hours, I build my own projects.
+      I'm Mukul Waval. I enjoy working on projects that challenge me and push me
+      to learn more.
     </>
   )
 };
@@ -75,68 +69,34 @@ const about = {
   },
   calendar: {
     display: true,
-    link: "https://cal.com"
+    link: "https://cal.com/mukul-waval"
   },
   intro: {
     display: true,
     title: "Introduction",
-    description: (
-      <>
-        Selene is a Jakarta-based design engineer with a passion for
-        transforming complex challenges into simple, elegant design solutions.
-        Her work spans digital interfaces, interactive experiences, and the
-        convergence of design and technology.
-      </>
-    )
+    description: <></>
   },
   work: {
     display: true, // set to false to hide this section
     title: "Work Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "Devcreate Solutions",
+        timeframe: "2023 - Present",
+        role: "SDE Intern",
         achievements: [
+          <>Learned and worked with C# and React.</>,
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20%
-            increase in user engagement and 30% faster load times.
+            Gained experience in software development and building applications.
           </>,
-          <>
-            Spearheaded the integration of AI tools into design workflows,
-            enabling designers to iterate 50% faster.
-          </>
-        ],
-        images: [
-          // optional: leave the array empty if you don't want to display images
-          {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
-            width: 16,
-            height: 9
-          }
-        ]
-      },
-      {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
-        achievements: [
-          <>
-            Developed a design system that unified the brand across multiple
-            platforms, improving design consistency by 40%.
-          </>,
-          <>
-            Led a cross-functional team to launch a new product line,
-            contributing to a 15% increase in overall company revenue.
-          </>
+          <>Worked on projects involving front-end and back-end development.</>
         ],
         images: []
       }
     ]
   },
   studies: {
-    display: true, // set to false to hide this section
+    display: false, // set to false to hide this section
     title: "Studies",
     institutions: [
       {
@@ -153,49 +113,25 @@ const about = {
     display: true, // set to false to hide this section
     title: "Technical skills",
     skills: [
-      {
-        title: "Figma",
-        description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
-        ),
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9
-          }
-        ]
-      },
-      {
-        title: "Next.js",
-        description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
-        ),
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9
-          }
-        ]
-      }
+      { title: "Next.js", description: null, images: [] },
+      { title: "React.js", description: null, images: [] },
+      { title: "Nest.js", description: null, images: [] },
+      { title: "C#", description: null, images: [] },
+      { title: "MySQL", description: null, images: [] },
+      { title: "Git", description: null, images: [] },
+      { title: "Express.js", description: null, images: [] },
+      { title: "Vue.js", description: null, images: [] },
+      { title: "MongoDB", description: null, images: [] },
+      { title: "Figma", description: null, images: [] },
+      { title: "Python", description: null, images: [] },
+      { title: "C++", description: null, images: [] }
     ]
   }
 };
 
 const blog = {
   label: "Blog",
-  title: "Writing about design and tech...",
+  title: "Writing about...",
   description: `Read what ${person.name} has been up to recently`
   // Create new blog posts by adding a new .mdx file to app/blog/posts
   // All posts will be listed on the /blog route

@@ -3,7 +3,7 @@ import React, { ReactNode } from "react";
 
 import { SmartImage, SmartLink, Text } from "@/once-ui/components";
 import { CodeBlock } from "@/once-ui/modules";
-import { HeadingLink } from "@/components/HeadingLink";
+import { HeadingLink } from "@/components";
 
 import { TextProps } from "@/once-ui/interfaces";
 import { SmartImageProps } from "@/once-ui/components/SmartImage";
@@ -16,9 +16,7 @@ type TableProps = {
 };
 
 function Table({ data }: TableProps) {
-  const headers = data.headers.map((header, index) => (
-    <th key={index}>{header}</th>
-  ));
+  const headers = data.headers.map((header, index) => <th key={index}>{header}</th>);
   const rows = data.rows.map((row, index) => (
     <tr key={index}>
       {row.map((cell, cellIndex) => (
@@ -66,11 +64,7 @@ function CustomLink({ href, children, ...props }: CustomLinkProps) {
   );
 }
 
-function createImage({
-  alt,
-  src,
-  ...props
-}: SmartImageProps & { src: string }) {
+function createImage({ alt, src, ...props }: SmartImageProps & { src: string }) {
   if (!src) {
     console.error("SmartImage requires a valid 'src' property.");
     return null;
@@ -105,10 +99,7 @@ function createHeading(level: 1 | 2 | 3 | 4 | 5 | 6) {
     const slug = slugify(children as string);
     return (
       <HeadingLink
-        style={{
-          marginTop: "var(--static-space-24)",
-          marginBottom: "var(--static-space-12)"
-        }}
+        style={{ marginTop: "var(--static-space-24)", marginBottom: "var(--static-space-12)" }}
         level={level}
         id={slug}
         {...props}
@@ -148,7 +139,7 @@ const components = {
   img: createImage as any,
   a: CustomLink as any,
   Table,
-  CodeBlock
+  CodeBlock,
 };
 
 type CustomMDXProps = MDXRemoteProps & {
@@ -158,9 +149,6 @@ type CustomMDXProps = MDXRemoteProps & {
 export function CustomMDX(props: CustomMDXProps) {
   return (
     // @ts-ignore: Suppressing type error for MDXRemote usage
-    <MDXRemote
-      {...props}
-      components={{ ...components, ...(props.components || {}) }}
-    />
+    <MDXRemote {...props} components={{ ...components, ...(props.components || {}) }} />
   );
 }

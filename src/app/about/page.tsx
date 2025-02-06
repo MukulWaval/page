@@ -1,8 +1,10 @@
 import {
   Avatar,
+  Badge,
   Button,
   Column,
   Flex,
+  Grid,
   Heading,
   Icon,
   IconButton,
@@ -10,11 +12,10 @@ import {
   Tag,
   Text
 } from "@/once-ui/components";
-import { baseURL } from "@/once-ui/resources/config";
+import { baseURL } from "@/app/resources";
 import TableOfContents from "@/components/about/TableOfContents";
 import styles from "@/components/about/about.module.scss";
 import { person, about, social } from "@/app/resources/content";
-import { JSX } from "react";
 
 export async function generateMetadata() {
   const title = about.title;
@@ -353,42 +354,13 @@ export default function About() {
               >
                 {about.technical.title}
               </Heading>
-              <Column fillWidth gap="l">
+              <Grid columns="3" gap="24" padding="24">
                 {about.technical.skills.map((skill, index) => (
-                  <Column key={`${skill}-${index}`} fillWidth gap="4">
-                    <Text variant="heading-strong-l">{skill.title}</Text>
-                    <Text variant="body-default-m" onBackground="neutral-weak">
-                      {skill.description}
-                    </Text>
-                    {skill.images && skill.images.length > 0 && (
-                      <Flex fillWidth paddingTop="m" gap="12" wrap>
-                        {skill.images.map((image, index) => (
-                          <Flex
-                            key={index}
-                            border="neutral-medium"
-                            radius="m"
-                            //@ts-ignore
-                            minWidth={image.width}
-                            //@ts-ignore
-                            height={image.height}
-                          >
-                            <SmartImage
-                              enlarge
-                              radius="m"
-                              //@ts-ignore
-                              sizes={image.width.toString()}
-                              //@ts-ignore
-                              alt={image.alt}
-                              //@ts-ignore
-                              src={image.src}
-                            />
-                          </Flex>
-                        ))}
-                      </Flex>
-                    )}
-                  </Column>
+                  <Badge effect key={`${skill}-${index}`}>
+                    {skill.title}
+                  </Badge>
                 ))}
-              </Column>
+              </Grid>
             </>
           )}
         </Column>

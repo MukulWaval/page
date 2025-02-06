@@ -2,15 +2,8 @@
 
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
-import { routes, protectedRoutes } from "@/once-ui/resources/config";
-import {
-  Flex,
-  Spinner,
-  Input,
-  Button,
-  Heading,
-  Column
-} from "@/once-ui/components";
+import { routes, protectedRoutes } from "@/app/resources";
+import { Flex, Spinner, Input, Button, Heading, Column } from "@/once-ui/components";
 
 interface RouteGuardProps {
   children: React.ReactNode;
@@ -71,7 +64,7 @@ const RouteGuard: React.FC<RouteGuardProps> = ({ children }) => {
     const response = await fetch("/api/authenticate", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ password })
+      body: JSON.stringify({ password }),
     });
 
     if (response.ok) {

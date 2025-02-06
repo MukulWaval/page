@@ -1,0 +1,40 @@
+---
+title: "Building Chisel, a Markdown Parser for Obsidian"
+publishedAt: "2025-02-06"
+summary: "Development of Chisel, a high-performance Markdown parser written in C++ with full support for Obsidian-flavored Markdown."
+images:
+  - "/images/projects/chisel/cover-01.jpg"
+team:
+  - name: "Mukul Waval"
+    role: "Software Engineer"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://www.linkedin.com/in/mukul-waval-ab4a772a7/"
+link: "https://github.com/MukulWaval/Markdown-Parser"
+---
+
+## Overview
+
+Chisel is a high-performance Markdown parser built in C++ that fully supports Obsidian-flavored Markdown. It was designed to handle complex syntax features, including links, callouts, math equations, and embedded content, while maintaining speed and efficiency.
+
+## Key Features
+
+- **Obsidian Syntax Support**: Implements full compatibility with Obsidian’s extended Markdown features, including wikilinks, callouts, and transclusions.
+- **High-Performance Parsing**: Optimized parsing algorithms written in C++ to handle large Markdown files efficiently.
+- **HTML & AST Output**: Converts Markdown into structured Abstract Syntax Trees (AST) and HTML for rendering in different environments.
+- **Custom Extension Support**: Allows adding new syntax rules and extensions to adapt to evolving Markdown needs.
+- **Error Handling & Recovery**: Provides detailed error messages and recovery mechanisms to handle malformed Markdown gracefully.
+
+## Technologies Used
+
+- **C++**: For high-performance parsing and efficient memory management.
+- **Flex & Bison (or Custom Lexer/Parser)**: For defining and processing Markdown grammar.
+- **Obsidian Markdown Specification**: Ensures full compatibility with Obsidian's extended syntax.
+- **Unicode & UTF-8 Handling**: Properly supports international characters and symbols.
+
+## Challenges and Learnings
+
+One major challenge was ensuring compatibility with all of Obsidian’s extended Markdown features while maintaining parsing speed. Handling nested elements like callouts, embedded content, and custom syntax required careful structuring of the parsing logic. Implementing a modular architecture allowed for future expansion and customization.
+
+## Outcome
+
+Chisel is now a fast, reliable Markdown parser tailored for Obsidian users. It provides a foundation for integrating Markdown rendering into custom applications while preserving full compatibility with Obsidian’s ecosystem. The project improves document processing efficiency and offers a flexible solution for developers working with Markdown at scale.

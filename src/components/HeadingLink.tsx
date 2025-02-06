@@ -1,6 +1,6 @@
 "use client";
 
-import React, { JSX } from "react";
+import React from "react";
 import { Heading, Flex, IconButton, useToast } from "@/once-ui/components";
 
 import styles from "@/components/HeadingLink.module.scss";
@@ -12,12 +12,7 @@ interface HeadingLinkProps {
   style?: React.CSSProperties;
 }
 
-export const HeadingLink: React.FC<HeadingLinkProps> = ({
-  id,
-  level,
-  children,
-  style
-}) => {
+export const HeadingLink: React.FC<HeadingLinkProps> = ({ id, level, children, style }) => {
   const { addToast } = useToast();
 
   const copyURL = (id: string): void => {
@@ -26,15 +21,15 @@ export const HeadingLink: React.FC<HeadingLinkProps> = ({
       () => {
         addToast({
           variant: "success",
-          message: "Link copied to clipboard."
+          message: "Link copied to clipboard.",
         });
       },
       () => {
         addToast({
           variant: "danger",
-          message: "Failed to copy link."
+          message: "Failed to copy link.",
         });
-      }
+      },
     );
   };
 
@@ -44,7 +39,7 @@ export const HeadingLink: React.FC<HeadingLinkProps> = ({
     3: "heading-strong-l",
     4: "heading-strong-m",
     5: "heading-strong-s",
-    6: "heading-strong-xs"
+    6: "heading-strong-xs",
   } as const;
 
   const variant = variantMap[level];
@@ -72,4 +67,3 @@ export const HeadingLink: React.FC<HeadingLinkProps> = ({
     </Flex>
   );
 };
-    

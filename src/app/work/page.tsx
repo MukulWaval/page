@@ -1,7 +1,7 @@
 import { getPosts } from "@/app/utils/utils";
 import { Column } from "@/once-ui/components";
 import { Projects } from "@/components/work/Projects";
-import { baseURL } from "@/once-ui/resources/config";
+import { baseURL } from "@/app/resources";
 import { person, work } from "@/app/resources/content";
 
 export async function generateMetadata() {
@@ -20,16 +20,16 @@ export async function generateMetadata() {
       images: [
         {
           url: ogImage,
-          alt: title
-        }
-      ]
+          alt: title,
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
-      images: [ogImage]
-    }
+      images: [ogImage],
+    },
   };
 }
 
@@ -51,16 +51,16 @@ export default function Work() {
             image: `${baseURL}/og?title=Design%20Projects`,
             author: {
               "@type": "Person",
-              name: person.name
+              name: person.name,
             },
             hasPart: allProjects.map((project) => ({
               "@type": "CreativeWork",
               headline: project.metadata.title,
               description: project.metadata.summary,
               url: `https://${baseURL}/projects/${project.slug}`,
-              image: `${baseURL}/${project.metadata.image}`
-            }))
-          })
+              image: `${baseURL}/${project.metadata.image}`,
+            })),
+          }),
         }}
       />
       <Projects />

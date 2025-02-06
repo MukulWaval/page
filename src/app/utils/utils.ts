@@ -20,7 +20,7 @@ type Metadata = {
   link?: string;
 };
 
-import { notFound } from "next/navigation";
+import { notFound } from 'next/navigation';
 
 function getMDXFiles(dir: string) {
   if (!fs.existsSync(dir)) {
@@ -31,9 +31,9 @@ function getMDXFiles(dir: string) {
 }
 
 function readMDXFile(filePath: string) {
-  if (!fs.existsSync(filePath)) {
-    notFound();
-  }
+    if (!fs.existsSync(filePath)) {
+        notFound();
+    }
 
   const rawContent = fs.readFileSync(filePath, "utf-8");
   const { data, content } = matter(rawContent);
@@ -46,7 +46,7 @@ function readMDXFile(filePath: string) {
     images: data.images || [],
     tag: data.tag || [],
     team: data.team || [],
-    link: data.link || ""
+    link: data.link || "",
   };
 
   return { metadata, content };
@@ -61,7 +61,7 @@ function getMDXData(dir: string) {
     return {
       metadata,
       slug,
-      content
+      content,
     };
   });
 }

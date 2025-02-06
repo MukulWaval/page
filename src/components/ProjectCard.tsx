@@ -7,7 +7,7 @@ import {
   Flex,
   Heading,
   SmartLink,
-  Text
+  Text,
 } from "@/once-ui/components";
 
 interface ProjectCardProps {
@@ -28,7 +28,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   content,
   description,
   avatars,
-  link
+  link,
 }) => {
   return (
     <Column fillWidth gap="m">
@@ -36,7 +36,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
         sizes="(max-width: 960px) 100vw, 960px"
         images={images.map((image) => ({
           src: image,
-          alt: title
+          alt: title,
         }))}
       />
       <Flex
@@ -56,15 +56,9 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
         )}
         {(avatars?.length > 0 || description?.trim() || content?.trim()) && (
           <Column flex={7} gap="16">
-            {avatars?.length > 0 && (
-              <AvatarGroup avatars={avatars} size="m" reverse />
-            )}
+            {avatars?.length > 0 && <AvatarGroup avatars={avatars} size="m" reverse />}
             {description?.trim() && (
-              <Text
-                wrap="balance"
-                variant="body-default-s"
-                onBackground="neutral-weak"
-              >
+              <Text wrap="balance" variant="body-default-s" onBackground="neutral-weak">
                 {description}
               </Text>
             )}
